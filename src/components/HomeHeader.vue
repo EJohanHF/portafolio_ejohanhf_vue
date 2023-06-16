@@ -1,0 +1,106 @@
+<script setup></script>
+<template>
+    <header class="md:flex mt-10">
+        <div class="md:flex-1">
+            <div class="text-center md:text-left">
+                <div class="callout top-right inline-block bg-kjColorDark text-kjColorLight shadow"
+                    style="transform: translate(0px, 0px)">
+                    Hola Soy
+                </div>
+                <h1 class="text-5xl font-black leading-none mb-4">
+                    <span class="letter" style="font-size: 3rem">O</span>
+                    <span class="letter" style="font-size: 3rem">m</span>
+                    <span class="letter" style="font-size: 3rem">o</span>
+                    <span class="letter" style="font-size: 3rem">n</span>
+                    <span class="letter" style="font-size: 3rem">i</span>
+                    <span class="letter" style="font-size: 3rem">g</span>
+                    <span class="letter" style="font-size: 3rem">h</span>
+                    <span class="letter" style="font-size: 3rem">o</span>
+                    <br />
+                    <span class="letter" style="font-size: 3rem">K</span>
+                    <span class="letter" style="font-size: 3rem">.</span>
+                    <span class="letter" style="font-size: 3rem">&nbsp;</span>
+                    <span class="letter" style="font-size: 3rem">J</span>
+                    <span class="letter" style="font-size: 3rem">i</span>
+                    <span class="letter" style="font-size: 3rem">m</span>
+                    <span class="letter" style="font-size: 3rem">m</span>
+                    <span class="letter" style="font-size: 3rem">y</span>
+                </h1>
+            </div>
+            <p class="text-kjColorGray text-sm mt-10 text-center md:text-left px-5 md:px-0 md:w-64 message"
+                style="transform: translate(0px, 0px); opacity: 1">
+
+                Un desarrollador de software
+                enfocado en la construcción
+                de sistemas a me medida.
+
+            </p>
+            <div class="mt-10 talk-wrapper" style="opacity: 1">
+                <a href="mailto:E.Johan.Herrera.F@Gmail.com" target="_blank">
+                    <div class="talk" data-v-266b19da="" style="transform: translate(0px, 0px)">
+                        <div class="talk2" data-v-266b19da="">
+                            contact me
+                        </div>
+                        <!-- <img src="img/talkButton.e935a8f.png" alt="talk button" class="talk-img" data-v-266b19da="" /> -->
+                        <div class="talk-pulse" data-v-266b19da="" style="opacity: 0; transform: scale(3, 3)"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="mt-10 md:flex-1">
+            <img src="@/assets/profile_Caricature2.png" alt="Johan photo"
+                class="wr-19 ml-auto mr-auto md:ml-0 md:mr-0 md:w-128" />
+        </div>
+    </header>
+</template>
+
+<style>
+    .talk {
+    position: relative;
+    right: -55px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 15px solid hsla(7, 76%, 69%, 0.863);
+    background: #d64633;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+}
+
+
+
+
+.callout.top-right:before {
+    right: 7px;
+    bottom: -20px;
+    border-top: 10px solid #2b2929;
+}
+.callout:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 0.8em solid transparent;
+    position: absolute;
+}
+
+.callout {
+    height: 18px;
+    width: 90px;
+    background-image: -moz-linear-gradient(top,#2b2929,#2b2929);
+    position: relative;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 25px;
+    min-height: 50px;
+    border: 1px solid #2b2929;
+    text-shadow: 0 0 1px #000;
+    transform: scale(0);
+}
+
+
+</style>
