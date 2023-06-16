@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 @layer utilities {
- 
+    .dark-mode .dark\:bg-kjColorBlack, .dark-mode.dark\:bg-kjColorBlack  {
+        --bg-opacity: 1;
+        background-color: #0d1017;
+        background-color: rgba(13,16,23,var(--bg-opacity));
+    }
     .bg-kjColorLight {
         --bg-opacity: 1;
         background-color:#f2f0ee;
@@ -20,6 +24,7 @@
         color: #58595b;
         color: rgba(88,89,91,var(--text-opacity));
     }
+ 
 
     .text-kjColorLight {
         --text-opacity: 1;
@@ -73,5 +78,6 @@
         -o-object-fit: contain;
         object-fit: contain;
     }
+
  
 }
