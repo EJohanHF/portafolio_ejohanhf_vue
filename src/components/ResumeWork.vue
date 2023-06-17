@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import cv from '@/assets/CV-JOHAN.pdf'
+
+</script>
 
 <template>
   <h1 class="mt-6 text-2xl font-bold capitalize">experience</h1>
@@ -29,15 +32,16 @@
 
   <div class="flex justify-between items-center flex-wrap">
     <a
-      href="doc/CV-JOHAN.pdf"
-      download="/src/assets/CV-JohanHerreraFaudno.pdf"
+      :href="cv"
+      download="CV-JohanHerreraFaudno.pdf"
       target="_blank"
-      ><button
-        class="p-2 mt-10 mb-10 md:mb-0 w-48 text-center text-white font-semibold bg-kjColorSecondary shadow-lg cursor-pointer my-cv"
       >
-        <font style="vertical-align: inherit">
-          <font style="vertical-align: inherit"> Descargar mi currículum </font>
-        </font>
+      <button
+        class="p-2 mt-10 mb-10 md:mb-0 w-50 text-center text-white font-semibold bg-kjColorSecondary shadow-lg cursor-pointer my-cv"
+      >
+        <p style="vertical-align: inherit">
+          <p style="vertical-align: inherit"> Descargar mi currículum </p>
+          </p>
       </button></a
     >
   </div>

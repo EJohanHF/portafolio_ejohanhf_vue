@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 @layer utilities {
+    .letter {
+        font-size: 0;
+    }
+
+    .message{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    .bg-kjColorSecondary {
+        --bg-opacity: 1; 
+       background-color: #607393;
+       background-color: rgba(96,115,147,var(--bg-opacity));
+   }
     .dark-mode .dark\:bg-kjColorBlack, .dark-mode.dark\:bg-kjColorBlack  {
         --bg-opacity: 1;
         background-color: #0d1017;
@@ -79,5 +92,5 @@
         object-fit: contain;
     }
 
- 
+
 }

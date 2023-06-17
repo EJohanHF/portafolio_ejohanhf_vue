@@ -1,37 +1,41 @@
 <script setup>
-import { ref } from "vue";
+import { ref, watchEffect } from "vue";
 import ResumeWork from "../components/ResumeWork.vue";
 
-const tecnologyimg = ref([
+const tecnologyimg = ref([]);
+
+watchEffect(async ()=> {
+  
+  const newTecnologyimg = [
   [
     {
       name: "Html",
-      urlimg: "/src/assets/html.png",
+      urlimg: (await(import('/src/assets/html.webp'))).default,
       urlWeb: "https://developer.mozilla.org/en-US/docs/Web/HTML",
     },
     {
       name: "Css",
-      urlimg: "/src/assets/css.png",
+      urlimg: (await(import('/src/assets/css.webp'))).default,
       urlWeb: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     },
     {
       name: "JavaScript",
-      urlimg: "/src/assets/js.png",
+      urlimg: (await(import('/src/assets/js.webp'))).default,
       urlWeb: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     },
     {
       name: "Vuejs",
-      urlimg: "/src/assets/vue.png",
+      urlimg: (await(import('/src/assets/vue.webp'))).default,
       urlWeb: "https://vuejs.org/",
     },
     {
       name: "Gsap",
-      urlimg: "/src/assets/gsap.png",
-      urlWeb: "https://e-johanherrera-f.netlify.app/img/gsap.png",
+      urlimg: (await(import('/src/assets/gsap.webp'))).default,
+      urlWeb: "https://e-johanherrera-f.netlify.app/img/gsap.webp",
     },
     {
       name: "Asp.net MVC",
-      urlimg: "/src/assets/asp.net.png",
+      urlimg: (await(import('/src/assets/asp.net.webp'))).default,
       urlWeb:
         "https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started",
     },
@@ -39,49 +43,51 @@ const tecnologyimg = ref([
   [
     {
       name: "PostgreSql",
-      urlimg: "/src/assets/posgresql.png",
+      urlimg: (await(import('/src/assets/posgresql.webp'))).default,
       urlWeb: "https://www.postgresql.org/",
     },
     {
       name: "SqlServer",
-      urlimg: "/src/assets/sqlserver.png",
+      urlimg: (await(import('/src/assets/sqlserver.webp'))).default,
       urlWeb:
         "https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver16",
     },
     {
       name: "jQuery",
-      urlimg: "/src/assets/jQuery.png",
+      urlimg: (await(import('/src/assets/jQuery.webp'))).default,
       urlWeb: "https://api.jquery.com/",
     },
     {
       name: "php",
-      urlimg: "/src/assets/php.png",
+      urlimg: (await(import('/src/assets/php.webp'))).default,
       urlWeb: "https://www.php.net/docs.php",
     },
     {
       name: "mysql",
-      urlimg: "/src/assets/mysql.php",
+      urlimg: (await(import('/src/assets/mysql.webp'))).default,
       urlWeb: "https://dev.mysql.com/doc/",
     },
   ],
   [
     {
       name: "GitHub",
-      urlimg: "/src/assets/github.png",
+      urlimg: (await(import('/src/assets/github.webp'))).default,
       urlWeb: "https://docs.github.com/es",
     },
     {
       name: "Postman",
-      urlimg: "/src/assets/postman.png",
+      urlimg: (await(import('/src/assets/postman.webp'))).default,
       urlWeb: "https://www.postman.com/api-documentation-tool/",
     },
     {
       name: "C#",
-      urlimg: "/src/assets/cshar.png",
+      urlimg: (await(import('/src/assets/cshar.webp'))).default,
       urlWeb: "https://learn.microsoft.com/en-us/dotnet/csharp/",
     },
   ],
-]);
+  ]
+  tecnologyimg.value = newTecnologyimg
+})
 </script>
 <template>
   <div>

@@ -7,7 +7,7 @@
           class="bg-kjColorLight dark:bg-kjColorBlack rounded-lg shadow-2xl border-2 border-kjColorLight"
         >
           <div class="p-4 grid md:gap-5 grid-cols-1 md:grid-cols-2">
-            <img src="@/assets/Johan.png" class="w-128 rounded-lg" />
+            <img src="@/assets/Johan.webp" class="w-128 rounded-lg" />
             <div class="pt-10">
               <div>
                 <svg
@@ -72,7 +72,7 @@
                     class=""
                   ></path>
                 </svg>
-                <p class="inline-block ml-1">Me Gusta Jgar ajedrez</p>
+                <p class="inline-block ml-1">Me gusta Jugar ajedrez</p>
               </div>
               <div class="mt-2">
                 <p class="inline-block ml-1">

@@ -2,6 +2,10 @@
 import { RouterView } from "vue-router";
 import AppNav from "./components/AppNav.vue";
 import AppHeader from "./components/AppHeader.vue";
+
+
+    
+    
 </script>
 
 <template>
