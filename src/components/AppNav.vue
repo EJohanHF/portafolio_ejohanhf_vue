@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import AppNavSidebar from "./AppNavSidebar.vue"
 const toggleDarkMode = ref(document.documentElement.className === "dark-mode");
 
 const ChangeDarMode = () => {
@@ -8,6 +9,8 @@ const ChangeDarMode = () => {
     ? (localStorage.theme = "light")
     : (localStorage.theme = "dark-mode");
 };
+
+
 </script>
 <template>
   <nav>
@@ -35,7 +38,7 @@ const ChangeDarMode = () => {
             E.Johan.Herrera.F@Gmail.com
           </a>
         </div>
-        <!-- Dark Page -->
+        <!-- Dark Page Desktop -->
         <span
           @click="ChangeDarMode"
           class="cursor-pointer ml-10 dark:text-kjColorGray"
@@ -127,7 +130,9 @@ const ChangeDarMode = () => {
         >
       </div>
     </div>
-    <span class="absolute left-0 top-0 ml-24 mt-3 md:hidden"
+
+    <!-- Dark Color movil -->
+    <span @click="ChangeDarMode" class="absolute left-0 top-0 ml-24 mt-3 md:hidden"
       ><span class="cursor-pointer ml-10 dark:text-kjColorGray"
         ><svg
           aria-hidden="true"
@@ -145,26 +150,9 @@ const ChangeDarMode = () => {
             class=""
           ></path></svg></span
     ></span>
-    <div>
-      <!--Cargar info-->
-    </div>
-    <div>
-      <svg
-        aria-hidden="true"
-        focusable="false"
-        data-prefix="fas"
-        data-icon="bars"
-        role="img"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 448 512"
-        class="text-3xl mt-1 mr-2 absolute right-0 top-0 md:hidden svg-inline--fa fa-bars fa-w-14"
-      >
-        <path
-          fill="currentColor"
-          d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
-          class=""
-        ></path>
-      </svg>
-    </div>
+    
+    <AppNavSidebar/>
+    
+ 
   </nav>
 </template>

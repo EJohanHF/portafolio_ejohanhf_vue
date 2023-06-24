@@ -1,5 +1,5 @@
 <script setup>
-import { onUnmounted, ref, watchEffect } from "vue";
+import { ref, watchEffect } from "vue";
 
 defineProps(["headerview"]);
 

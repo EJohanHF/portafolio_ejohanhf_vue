@@ -3,13 +3,13 @@
   <div>
     <div>
       <div class="w-32">
-        <a href="/">
+        <router-link to="/">
           <img
             src="@/assets/logo.png"
             alt="logo"
             class="w-12 pb-2 inline-block"
           />
-        </a>
+        </router-link>
         <!-- Ref linkedin - GitHub - Twitter -->
         <div class="md:mt-64">
           <div class="md:h-6 md:w-6 hidden md:block">

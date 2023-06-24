@@ -1,33 +1,23 @@
 <script setup>
-import { RouterView } from "vue-router";
-import AppNav from "./components/AppNav.vue";
-import AppHeader from "./components/AppHeader.vue";
+import { ref, defineAsyncComponent } from 'vue';
+import loadingComponent from './components/PreLoader.vue';
+// import PageLayout from './page/page.vue'
+
+const PageLayout = defineAsyncComponent({
+  loader: () => {
+    return new Promise((resolve,reject)=>{
+      setTimeout(()=>{
+        resolve(import('./page/page.vue'));
+      },2000);
+    })
+  },
+  loadingComponent:loadingComponent,
+
+})
 
 
-    
-    
+const show = ref(false)
 </script>
-
 <template>
-  <div>
-    <div>
-      <div>
-        <div class="md:bg-kjColorLight dark:bg-kjColorBlack md:py-16">
-          <div
-            class="bg-white dark:bg-kjColorBlack md:max-w-6xl md:m-auto sm:rounded-lg p-2 md:p-8 text-kjColorGray md:shadow-2xl"
-          >
-            <div class="md:flex">
-              <AppHeader />
-              <div class="md:flex-1">
-                <AppNav />
-                <div>
-                  <RouterView />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <PageLayout/>
 </template>

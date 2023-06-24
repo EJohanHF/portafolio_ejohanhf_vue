@@ -92,5 +92,16 @@
         object-fit: contain;
     }
 
-
+    .bg-kjColorGold {
+        --bg-opacity: 1;
+        background-color: #9d9d93;
+        background-color: rgba(226,157,81,var(--bg-opacity));
+    }
+    
+    .bg-kjColorPrimeLight {
+        --bg-opacity: 1;
+        background-color: #c5cfc6;
+        background-color: rgba(216,199,184,var(--bg-opacity));
+    }
+    
 }
