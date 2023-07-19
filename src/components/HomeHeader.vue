@@ -35,7 +35,7 @@ onMounted(() => {
           class="callout top-right inline-block bg-kjColorDark text-kjColorLight shadow"
           style="transform: translate(0px, 0px)"
         >
-          Hola Soy
+          Hola Soy,
         </div>
         <h1 class="text-5xl font-black leading-none mb-4">
           <span class="letter">J</span><span class="letter">o</span
